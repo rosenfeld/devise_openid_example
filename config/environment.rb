@@ -7,9 +7,9 @@ RAILS_GEM_VERSION = '2.3.5' unless defined? RAILS_GEM_VERSION
 require File.join(File.dirname(__FILE__), 'boot')
 
 Rails::Initializer.run do |config|
-  config.gem 'devise', :version => '1.0.8'
-  config.gem 'rails-footnotes', :version => '3.6.5'
-  config.gem 'devise_openid_authenticatable', :version => '1.0.0.alpha5'
+  config.gem 'rack-openid', :version => '1.1.2', :lib => 'rack/openid'
+  config.gem 'devise', :version => '1.0.10'
+  config.gem 'devise_openid_authenticatable'
 
   config.middleware.use "Rack::OpenID"
 
